@@ -1,0 +1,79 @@
+{
+  "name": "ubts-stats-ui",
+  "version": "1.0.0",
+  "description": "UBTS Stats UI",
+  "main": "src/js/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",
+    "start-prod": "webpack-dev-server --mode production --open",
+    "build": "webpack --mode production",
+    "lint": "eslint ./src --cache"
+  },
+  "author": "Yaroslav Kuchkovsky",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kuchkovsky/ubts-stats-ui.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^2.0.1",
+    "compression-webpack-plugin": "^2.0.0",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^4.0.0-beta.5",
+    "husky": "^2.0.0",
+    "lint-staged": "^8.1.5",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "dependencies": {
+    "@date-io/dayjs": "^1.3.5",
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
+    "axios": "^0.19.0",
+    "classnames": "^2.2.6",
+    "dayjs": "^1.8.12",
+    "dotenv-webpack": "^1.7.0",
+    "history": "^4.9.0",
+    "immutable": "^4.0.0-rc.12",
+    "material-ui-pickers": "^2.2.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.8.4",
+    "react-redux": "^7.0.2",
+    "react-router-dom": "^5.0.0",
+    "react-vis": "^1.11.7",
+    "redux": "^4.0.1",
+    "redux-actions": "^2.6.5",
+    "redux-form": "^8.2.0",
+    "redux-immutable": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "with-immutable-props-to-js": "^1.1.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint ./src --cache --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
