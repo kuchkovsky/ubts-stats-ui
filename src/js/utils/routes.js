@@ -2,9 +2,9 @@ export const HOME = '/';
 
 export const SIGN_IN = '/signin';
 
-export const STATS = '/stats';
+export const STATS = '/plot';
 
-export const UPLOAD_STATS = '/stats/upload';
+export const UPLOAD_STATS = '/upload';
 
 const routes = [
   {
